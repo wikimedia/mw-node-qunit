@@ -23,3 +23,14 @@ If you want to run tests on watch, use `nodemon` for example:
 npm install -g nodemon
 nodemon --exec "mw-node-qunit tests/*.js | tap-dot"
 ```
+
+## Testing with QUnit
+
+This test runner will add QUnit, mediaWiki globals, and a jsdom window object
+and jquery initialized as `window`, `document`, and `jQuery` in the global
+scope so you can run your tests assuming those will be present.
+
+It also adds a sinon sandbox to the `this` scope on a test as `this.sandbox`
+that is automatically created and restored before and after every test, so you
+can spy/stub things in `beforeEach` or in the tests without worrying about
+having to manually restoring them after the test.
