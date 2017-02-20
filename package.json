@@ -1,0 +1,40 @@
+{
+  "name": "mw-node-qunit",
+  "version": "1.0.0",
+  "description": "Node CLI qunit runner with mediawiki additions",
+  "main": "index.js",
+  "scripts": {
+    "test": "./index.js tests/*.js | tap-dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joakin/mw-node-qunit.git"
+  },
+  "keywords": [
+    "node",
+    "cli",
+    "qunit",
+    "mediawiki",
+    "test",
+    "runner"
+  ],
+  "author": "Joaquin Oltra <joaquin@chimeces.com> (http://chimeces.com)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/joakin/mw-node-qunit/issues"
+  },
+  "homepage": "https://github.com/joakin/mw-node-qunit#readme",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jsdom": "^9.11.0",
+    "qunit-tap": "^1.5.1",
+    "qunitjs": "^2.1.1",
+    "sinon": "^1.17.7"
+  },
+  "devDependencies": {
+    "tap-dot": "^1.0.5"
+  },
+  "bin": {
+    "mw-node-qunit": "./index.js"
+  }
+}
