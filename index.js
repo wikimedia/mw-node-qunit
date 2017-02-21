@@ -20,6 +20,8 @@ QUnit.config.testTimeout = 3000;
 sinon.config = {
   injectIntoThis: true,
   injectInto: null,
+  useFakeTimers: false,
+  useFakeServer: false,
   properties: ['spy', 'stub', 'mock', 'sandbox']
 };
 
