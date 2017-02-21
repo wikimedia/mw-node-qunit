@@ -44,8 +44,6 @@ QUnit.module = function(name, localEnv) {
       }
     },
     afterEach: function() {
-      this.sandbox.restore();
-
       // Interop with old teardown config on mediawiki codebases
       if (localEnv.teardown) {
         localEnv.teardown.call(this);
@@ -53,6 +51,8 @@ QUnit.module = function(name, localEnv) {
       if (localEnv.afterEach) {
         localEnv.afterEach.call(this);
       }
+
+      this.sandbox.restore();
     }
   });
 };
