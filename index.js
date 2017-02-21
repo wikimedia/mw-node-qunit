@@ -17,6 +17,9 @@ reporter(QUnit, function() {
 // and assuming failure.
 QUnit.config.testTimeout = 3000;
 
+// Don't auto start running the tests, we'll start them below
+QUnit.config.autostart = false;
+
 sinon.config = {
   injectIntoThis: true,
   injectInto: null,
