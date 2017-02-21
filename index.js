@@ -19,6 +19,10 @@ QUnit.config.testTimeout = 3000;
 
 // Don't auto start running the tests, we'll start them below
 QUnit.config.autostart = false;
+// Don't re-order tests.
+QUnit.config.reorder = false;
+// Run tests serially, not in parallel.
+QUnit.config.autorun = false;
 
 sinon.config = {
   injectIntoThis: true,
