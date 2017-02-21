@@ -65,7 +65,7 @@ QUnit.module = function(name, localEnv) {
 };
 
 setDOMEnvironment();
-global.mediaWiki = {};
+global.mediaWiki = window.mediaWiki = {};
 global.QUnit = QUnit;
 
 process.argv.slice(2).forEach(file => require(path.resolve(file)));
@@ -79,5 +79,5 @@ function setDOMEnvironment() {
   global.document = global.window.document;
   // No need to pass window to the required module given it is in the global
   // and will pick it up
-  global.jQuery = global.$ = require('jquery');
+  global.jQuery = global.$ = window.jQuery = window.$ = require('jquery');
 }
