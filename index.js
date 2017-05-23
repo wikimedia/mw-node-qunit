@@ -74,8 +74,8 @@ QUnit.start();
 
 // Set up the global environment with mediaWiki, QUnit, $ and a jsdom dom
 function setDOMEnvironment() {
-  var document = jsdom.jsdom('<!doctype html><html><body></body></html>');
-  global.window = document.defaultView;
+  var dom = new jsdom.JSDOM('<!doctype html><html><body></body></html>');
+  global.window = dom.window;
   global.document = global.window.document;
   // No need to pass window to the required module given it is in the global
   // and will pick it up
