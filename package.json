@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --single-quote --write *.js ./**/*.js",
-    "test": "./index.js tests/*.js | tap-dot"
+    "test": "./index.js tests/*.test.js | tap-dot"
   },
   "repository": {
     "type": "git",
