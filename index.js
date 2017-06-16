@@ -39,8 +39,9 @@ QUnit.module = function(name, localEnv) {
   localEnv = localEnv || {};
   QUnitModule(name, {
     beforeEach: function() {
-      var config = sinon.getConfig(sinon.config);
-      config.injectInto = this;
+      var config = Object.assign({}, sinon.config, {
+        injectInto: this
+      });
       sinon.sandbox.create(config);
 
       // Interop with old setup config on mediawiki codebases
