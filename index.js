@@ -5,6 +5,7 @@ var QUnit = require('qunitjs');
 var jsdom = require('jsdom');
 var sinon = require('sinon');
 var reporter = require('qunit-tap');
+var glob = require('glob');
 var QUnitModule;
 
 // Set up QUnit reporter logging
@@ -68,9 +69,20 @@ setDOMEnvironment();
 global.mediaWiki = window.mediaWiki = {};
 global.QUnit = QUnit;
 
-process.argv.slice(2).forEach(file => require(path.resolve(file)));
+const args = process.argv.slice(2);
+Promise.all(args.map(getFiles))
+  .then(filesByArg => {
+    // Flatmap the files in an array
+    const files = filesByArg.reduce((acc, fs) => acc.concat(fs), []);
 
-QUnit.start();
+    files.forEach(file => require(path.resolve(file)));
+
+    QUnit.start();
+  })
+  .catch(err => {
+    console.err(err);
+    process.exit(1);
+  });
 
 // Set up the global environment with mediaWiki, QUnit, $ and a jsdom dom
 function setDOMEnvironment() {
@@ -80,4 +92,17 @@ function setDOMEnvironment() {
   // No need to pass window to the required module given it is in the global
   // and will pick it up
   global.jQuery = global.$ = window.jQuery = window.$ = require('jquery');
+}
+
+// Given a string argument, get an expanded list of files paths
+function getFiles(str) {
+  return new Promise((resolve, reject) => {
+    glob(str, (err, files) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(files);
+      }
+    });
+  });
 }

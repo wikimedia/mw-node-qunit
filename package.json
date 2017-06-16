@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --single-quote --write *.js ./**/*.js",
-    "test": "./index.js tests/*.test.js | tap-dot"
+    "test": "./index.js 'tests/**/*.test.js' | tap-dot",
+    "test:raw": "./index.js 'tests/**/*.test.js'"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/joakin/mw-node-qunit#readme",
   "dependencies": {
+    "glob": "^7.1.2",
     "jquery": "^3.2.1",
     "jsdom": "^11.0.0",
     "qunit-tap": "^1.5.1",
