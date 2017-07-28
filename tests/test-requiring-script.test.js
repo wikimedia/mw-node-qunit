@@ -1,6 +1,6 @@
-QUnit.module('Require script that uses globals', {
+QUnit.module("Require script that uses globals", {
   before() {
-    require('./script');
+    require("./script");
   },
   after() {
     delete mw.testNamespace;

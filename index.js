@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-var path = require('path');
-var QUnit = require('qunitjs');
-var jsdom = require('jsdom');
-var sinon = require('sinon');
-var reporter = require('qunit-tap');
-var glob = require('glob');
+var path = require("path");
+var QUnit = require("qunitjs");
+var jsdom = require("jsdom");
+var sinon = require("sinon");
+var reporter = require("qunit-tap");
+var glob = require("glob");
 var QUnitModule;
 
 // Set up QUnit reporter logging
@@ -30,7 +30,7 @@ sinon.config = {
   injectInto: null,
   useFakeTimers: false,
   useFakeServer: false,
-  properties: ['spy', 'stub', 'mock', 'sandbox']
+  properties: ["spy", "stub", "mock", "sandbox"]
 };
 
 // Override Qunit.module to set up a sinon sandbox automatically
@@ -87,12 +87,12 @@ Promise.all(args.map(getFiles))
 
 // Set up the global environment with mediaWiki, QUnit, $ and a jsdom dom
 function setDOMEnvironment() {
-  var dom = new jsdom.JSDOM('<!doctype html><html><body></body></html>');
+  var dom = new jsdom.JSDOM("<!doctype html><html><body></body></html>");
   global.window = dom.window;
   global.document = global.window.document;
   // No need to pass window to the required module given it is in the global
   // and will pick it up
-  global.jQuery = global.$ = window.jQuery = window.$ = require('jquery');
+  global.jQuery = global.$ = window.jQuery = window.$ = require("jquery");
 }
 
 // Given a string argument, get an expanded list of files paths

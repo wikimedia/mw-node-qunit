@@ -4,7 +4,7 @@
   "description": "Node CLI qunit runner with mediawiki additions",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --single-quote --write *.js ./**/*.js",
+    "format": "prettier --write *.js ./**/*.js",
     "test": "./index.js 'tests/**/*.test.js' | tap-dot",
     "test:raw": "./index.js 'tests/**/*.test.js'"
   },
