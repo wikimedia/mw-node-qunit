@@ -81,7 +81,7 @@ Promise.all(args.map(getFiles))
     QUnit.start();
   })
   .catch(err => {
-    console.err(err);
+    console.error(err);
     process.exit(1);
   });
 
