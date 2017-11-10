@@ -1,3 +1,11 @@
+# 3.0.0
+
+* Sinon upgraded to 4.1.2. There are major changes to the `sandbox` exposed so
+  check the migration guides from sinon to update your tests.
+   * http://sinonjs.org/guides/migrating-to-3.0
+   * http://sinonjs.org/guides/migrating-to-4.0
+   * https://github.com/sinonjs/sinon/blob/master/History.md#411--2017-11-03
+
 # 2.2.0
 
 * Upgrade sinon to 2.4.1
