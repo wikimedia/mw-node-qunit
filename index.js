@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var path = require("path");
-var QUnit = require("qunitjs");
+var QUnit = require("qunit");
 var jsdom = require("jsdom");
 var sinon = require("sinon");
 var reporter = require("qunit-tap");
