@@ -29,7 +29,7 @@
   "dependencies": {
     "glob": "^7.1.2",
     "jquery": "^3.2.1",
-    "jsdom": "^11.0.0",
+    "jsdom": "^11.3.0",
     "qunit-tap": "^1.5.1",
     "qunitjs": "^2.3.2",
     "sinon": "^2.3.1"
