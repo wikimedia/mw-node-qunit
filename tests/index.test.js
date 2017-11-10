@@ -41,7 +41,9 @@ QUnit.test("a sinon sandbox is added to this.sandbox", function(assert) {
 
 QUnit.module("A test that uses the DOM", {
   beforeEach() {
-    this.el = $('<div id="test"/>').text("banana").append(window.document.body);
+    this.el = $('<div id="test"/>')
+      .text("banana")
+      .append(window.document.body);
   },
   afterEach() {
     this.el.remove();
