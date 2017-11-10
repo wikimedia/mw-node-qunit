@@ -1,3 +1,10 @@
+# 2.2.0
+
+* Upgrade sinon to 2.4.1
+* Update qunit to 2.4.1
+* Update jsdom to 11.3.0
+* Update prettier to 1.8.2 and reformat code
+
 # 2.1.0
 
 * Fix sinon.getConfig deprecation warnings in runner
