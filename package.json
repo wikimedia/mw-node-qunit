@@ -1,6 +1,6 @@
 {
   "name": "mw-node-qunit",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Node CLI qunit runner with mediawiki additions",
   "main": "index.js",
   "scripts": {
