@@ -32,7 +32,7 @@
     "jsdom": "^11.7.0",
     "qunit": "^2.6.0",
     "qunit-tap": "^1.5.1",
-    "sinon": "^4.1.2"
+    "sinon": "^4.5.0"
   },
   "devDependencies": {
     "prettier": "^1.11.1",
