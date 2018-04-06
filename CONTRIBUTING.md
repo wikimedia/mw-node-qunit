@@ -15,31 +15,31 @@ before spending time submitting a PR! It may save you time in the long run.
 
 Always run `npm test` and test the tool with a real repository before releasing.
 
-* Inspect the git log to check the changes since the last release:
-  * `` git log `git describe --tags --abbrev=0` ..HEAD --oneline ``
-* Copy the changes and add them to `CHANGELOG.md`
-  * Commit them
-* Make the new version and publish it:
-  * `npm version <version-type:major|minor|patch> && g ps && g ps --tags && npm publish`
+1.  Inspect the git log to check the changes since the last release:
+    * `` git log `git describe --tags --abbrev=0` ..HEAD --oneline ``
+1.  Copy the changes and add them to `CHANGELOG.md`
+    1.  Commit them
+1.  Make the new version and publish it:
+    * `npm version <version-type:major|minor|patch> && g ps && g ps --tags && npm publish`
 
 ### Updating dependencies
 
-* Run `npm outdated`
-* Pick a dependency
-  * Take the minor or patch versions first
-* Check the changelog, history, release notes or blog
-  * Copy the changes
-* `npm update <library>@<version>`
-* Git add package.json and package-lock.json
-* Commit with the subject `Upgrade <lib> from <version> to <new-version>`
-* Add the changelog you copied to the commit message
-* If it was minor, and there are more minor deps then:
-  * Back to start, pick the next dependency
-* If it was the last minor change:
-  * Release a minor version of mw-node-qunit (see _Release_ section)
-  * Back to start, pick the next dependency
-* If it was a major, and there are more major deps, then:
-  * Back to start, pick the next dependency
-* If it was the last major change:
-  * Release a major version of mw-node-qunit (see _Release_ section)
-  * Back to start, pick the next dependency
+1.  Run `npm outdated`
+1.  Pick a dependency
+    1.  Take the minor or patch versions first
+1.  Check the changelog, history, release notes or blog
+    1.  Copy the changes
+1.  `npm update <library>@<version>`
+1.  Git add package.json and package-lock.json
+1.  Commit with the subject `Upgrade <lib> from <version> to <new-version>`
+1.  Add the changelog you copied to the commit message
+1.  If it was minor, and there are more minor deps then:
+    1.  Back to start, pick the next dependency
+1.  If it was the last minor change:
+    1.  Release a minor version of mw-node-qunit (see _Release_ section)
+    1.  Back to start, pick the next dependency
+1.  If it was a major, and there are more major deps, then:
+    1.  Back to start, pick the next dependency
+1.  If it was the last major change:
+    1.  Release a major version of mw-node-qunit (see _Release_ section)
+    1.  Back to start, pick the next dependency
