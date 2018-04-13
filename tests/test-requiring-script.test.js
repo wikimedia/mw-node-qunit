@@ -1,8 +1,12 @@
 QUnit.module("Require script that uses globals", {
-  before() {
+  beforeEach() {
     require("./script");
   },
-  after() {
-    delete mw.testNamespace;
+  afterEach() {
+    delete mediaWiki.testNamespace;
   }
+});
+
+QUnit.test("Can use the things created in the required script", assert => {
+  assert.equal(mediaWiki.testNamespace.add(1, 2), 3);
 });
