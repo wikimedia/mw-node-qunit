@@ -1,3 +1,8 @@
+# 4.0.0
+
+* Rely on the CLI runner from qunit
+* Fix testing require and global mediaWiki not asserting anything
+
 # 3.1.0
 
 * Added CONTRIBUTING.md
