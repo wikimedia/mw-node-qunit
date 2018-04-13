@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/joakin/mw-node-qunit#readme",
   "dependencies": {
+    "esm": "^3.0.17",
     "glob": "^7.1.2",
     "jquery": "^3.3.1",
     "jsdom": "^11.7.0",

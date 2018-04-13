@@ -6,6 +6,6 @@ var setupScript = path.resolve(__dirname, "./wikimedia-setup.js");
 
 // Insert our wikimedia setup script in the arguments array before calling the
 // qunit CLI
-process.argv.splice(2, 0, "--require", setupScript);
+process.argv.splice(2, 0, "--require", "esm", "--require", setupScript);
 
 require("qunit/bin/qunit");
