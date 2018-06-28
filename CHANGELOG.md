@@ -1,3 +1,7 @@
+# 5.0.0
+
+* Breaking: use org scoped packaging
+
 # 4.0.0
 
 * Rely on the CLI runner from qunit
