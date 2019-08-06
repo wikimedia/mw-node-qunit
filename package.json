@@ -1,6 +1,6 @@
 {
   "name": "@wikimedia/mw-node-qunit",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Node CLI qunit runner with mediawiki additions",
   "main": "index.js",
   "scripts": {
@@ -23,17 +23,18 @@
   "homepage": "https://github.com/wikimedia/mw-node-qunit#readme",
   "dependencies": {
     "glob": "^7.1.2",
-    "jquery": "^3.3.1",
-    "jsdom": "^11.7.0",
-    "qunit": "^2.6.0",
-    "qunit-tap": "^1.5.1",
-    "sinon": "^4.5.0"
+    "jquery": "3.3.1",
+    "jsdom": "12.2.0",
+    "mustache": "3.0.1",
+    "oojs": "2.2.2",
+    "qunit": "2.7.0",
+    "sinon": "4.5.0"
   },
   "devDependencies": {
     "prettier": "^1.11.1",
     "tap-dot": "^1.0.5"
   },
   "bin": {
-    "mw-node-qunit": "./index.js"
+    "mw-node-qunit": "./mw-node-qunit.js"
   }
 }
