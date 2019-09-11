@@ -72,7 +72,11 @@ module.exports = function newMockMediaWiki() {
 		msg: function ( id ) { return id; },
 		now: Date.now.bind( Date ),
 		template: {
-			get: function () {}
+			get: function () {
+				return {
+					render: function () {}
+				};
+			}
 		},
 		user: {
 			options: {
