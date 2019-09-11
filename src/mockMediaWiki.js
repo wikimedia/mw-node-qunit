@@ -85,6 +85,7 @@ module.exports = function newMockMediaWiki() {
 			isAnon: function () {},
 			generateRandomSessionId: function () { return Math.random().toString(); }
 		},
+		trackSubscribe: function () {},
 		track: function () {},
 		util: {
 			getParamValue: function () {},
