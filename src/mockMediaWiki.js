@@ -79,6 +79,9 @@ module.exports = function newMockMediaWiki() {
 			}
 		},
 		user: {
+			tokens: {
+				get: function () {}
+			},
 			options: {
 				get: function () {}
 			},
