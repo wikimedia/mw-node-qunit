@@ -17,26 +17,13 @@ QUnit.test("jQuery global is defined", function(assert) {
 });
 
 QUnit.module("QUnit patching", {
-  setup() {
+  beforeEach() {
     this.setup = true;
   }
 });
 
 QUnit.test("setup and teardown methods are patched to work", function(assert) {
   assert.equal(this.setup, true, "setup hook was run");
-});
-QUnit.test("a sinon sandbox is added to this.sandbox", function(assert) {
-  assert.equal(typeof this.sandbox, "object", "sandbox is created");
-  assert.equal(
-    typeof this.sandbox.spy,
-    "function",
-    "sandbox methods are present"
-  );
-  assert.equal(
-    typeof this.sandbox.stub,
-    "function",
-    "sandbox methods are present"
-  );
 });
 
 QUnit.module("A test that uses the DOM", {

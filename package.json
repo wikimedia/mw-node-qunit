@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write './**/*.js'",
-    "test": "./index.js 'tests/**/*.test.js' | tap-dot",
+    "test": "node mw-node-qunit.js 'tests/**/*.test.js' --globals | tap-dot",
     "test:raw": "./index.js 'tests/**/*.test.js'"
   },
   "repository": "github:wikimedia/mw-node-qunit",
