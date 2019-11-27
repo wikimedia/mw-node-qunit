@@ -23,7 +23,7 @@
   "homepage": "https://github.com/wikimedia/mw-node-qunit#readme",
   "dependencies": {
     "glob": "^7.1.2",
-    "jquery": "3.3.1",
+    "jquery": "3.4.0",
     "jsdom": "12.2.0",
     "mustache": "3.0.1",
     "oojs": "2.2.2",
