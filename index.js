@@ -1,4 +1,3 @@
-/* global QUnit */
 const dom = require( './src/dom' ),
 	jQuery = require( './src/jQuery' ),
 	mw = require( './src/mw' ),

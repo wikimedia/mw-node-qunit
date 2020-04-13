@@ -1,4 +1,4 @@
-var
+const
 	/* eslint-disable camelcase */
 	namespaceIDs = {
 		special: -1,
@@ -15,7 +15,7 @@ Api.prototype.getToken = function () {};
 Api.prototype.postWithToken = function () {};
 
 module.exports = function newMockMediaWiki() {
-	var config = { wgNamespaceIds: namespaceIDs };
+	const config = { wgNamespaceIds: namespaceIDs };
 	return {
 		Api: Api,
 		RegExp: {
@@ -28,7 +28,7 @@ module.exports = function newMockMediaWiki() {
 		Uri: function () {},
 		config: {
 			get: function ( name, fallback ) {
-				return config[name] || fallback;
+				return config[ name ] || fallback;
 			}
 		},
 		confirmCloseWindow: function () {},

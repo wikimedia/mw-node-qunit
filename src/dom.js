@@ -1,4 +1,4 @@
-var
+const
 	headless = typeof window !== 'object',
 	jsdom = headless && require( 'jsdom' );
 

@@ -1,5 +1,5 @@
-QUnit.module("Deeply nested test");
+QUnit.module( 'Deeply nested test' );
 
-QUnit.test("Glob should parse and this test be run", assert => {
-  assert.ok("Run");
-});
+QUnit.test( 'Glob should parse and this test be run', ( assert ) => {
+	assert.ok( 'Run' );
+} );
