@@ -14,6 +14,14 @@ Api.prototype.post = function () {};
 Api.prototype.getToken = function () {};
 Api.prototype.postWithToken = function () {};
 
+const MwUri = function () {
+	this.query = {};
+};
+
+MwUri.prototype.toString = function () {
+	return `https://host?${Object.keys( this.query ).join( '=' )}`;
+};
+
 module.exports = function newMockMediaWiki() {
 	var config = { wgNamespaceIds: namespaceIDs };
 	return {
@@ -25,7 +33,7 @@ module.exports = function newMockMediaWiki() {
 			newFromText: function () {},
 			makeTitle: function () {}
 		},
-		Uri: function () {},
+		Uri: MwUri,
 		config: {
 			get: function ( name, fallback ) {
 				return config[name] || fallback;
