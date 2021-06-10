@@ -10,10 +10,12 @@ module.exports = {
 	 */
 	setUp: function ( sandbox, global ) {
 		const mw = newMockMediaWiki();
-		if ( headless ) {
+		if ( !sandbox || headless ) {
 			global.mw = mw || undefined;
 
-			sandbox.stub( global, 'mw' ).callsFake( () => mw );
+			if ( sandbox ) {
+				sandbox.stub( global, 'mw' ).callsFake( () => mw );
+			}
 		}
 	}
 };

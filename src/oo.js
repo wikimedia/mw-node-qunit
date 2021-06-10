@@ -2,13 +2,13 @@ var headless = typeof window !== 'object';
 
 module.exports = {
 	/**
-	 * @param {sinon.SinonSandbox} sandbox
+	 * @param {sinon.SinonSandbox} [sandbox]
 	 * @param {NodeJS.Global} global
 	 * @return {void}
 	 */
 	setUp: function ( sandbox, global ) {
 		var OO;
-		if ( headless ) {
+		if ( !sandbox || headless ) {
 			OO = require( 'oojs' );
 			OO.ui = {
 				Element: {
@@ -19,7 +19,9 @@ module.exports = {
 				Tool: function () {}
 			};
 			global.OO = OO || undefined;
-			sandbox.stub( global, 'OO' ).callsFake( () => OO );
+			if ( sandbox ) {
+				sandbox.stub( global, 'OO' ).callsFake( () => OO );
+			}
 		}
 	}
 };
