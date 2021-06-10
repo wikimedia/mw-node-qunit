@@ -4,8 +4,8 @@
   "description": "Node CLI qunit runner with mediawiki additions",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write './**/*.js'",
-    "test": "node mw-node-qunit.js 'tests/**/*.test.js' --globals",
+    "lint": "eslint --cache --max-warnings 0 .",
+    "test": "npm run lint && node mw-node-qunit.js 'tests/**/*.test.js' --globals",
     "test:raw": "./index.js 'tests/**/*.test.js'"
   },
   "repository": "github:wikimedia/mw-node-qunit",
@@ -22,6 +22,7 @@
   "bugs": "https://github.com/wikimedia/mw-node-qunit/issues",
   "homepage": "https://github.com/wikimedia/mw-node-qunit#readme",
   "dependencies": {
+    "eslint-config-wikimedia": "0.15.1",
     "glob": "7.1.2",
     "jquery": "3.6.0",
     "jsdom": "12.2.0",

@@ -1,4 +1,4 @@
-var headless = typeof window !== 'object';
+const headless = typeof window !== 'object';
 
 module.exports = {
 	/**

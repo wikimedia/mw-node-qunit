@@ -1,0 +1,16 @@
+{
+	"extends": [
+		"wikimedia/server",
+		"wikimedia/jquery",
+		"wikimedia/qunit"
+	],
+	"env": {
+		"browser": true
+	},
+	"globals": {
+		"mediaWiki": "readonly"
+	},
+	"rules": {
+		"no-var": "error"
+	}
+}

@@ -1,4 +1,7 @@
-var
+const
+	MwUri = function () {
+		this.query = {};
+	},
 	/* eslint-disable camelcase */
 	namespaceIDs = {
 		special: -1,
@@ -14,16 +17,12 @@ Api.prototype.post = function () {};
 Api.prototype.getToken = function () {};
 Api.prototype.postWithToken = function () {};
 
-const MwUri = function () {
-	this.query = {};
-};
-
 MwUri.prototype.toString = function () {
 	return `https://host?${Object.keys( this.query ).join( '=' )}`;
 };
 
 module.exports = function newMockMediaWiki() {
-	var config = { wgNamespaceIds: namespaceIDs };
+	const config = { wgNamespaceIds: namespaceIDs };
 	return {
 		Api: Api,
 		RegExp: {
@@ -36,7 +35,7 @@ module.exports = function newMockMediaWiki() {
 		Uri: MwUri,
 		config: {
 			get: function ( name, fallback ) {
-				return config[name] || fallback;
+				return config[ name ] || fallback;
 			}
 		},
 		confirmCloseWindow: function () {},

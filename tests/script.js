@@ -1,11 +1,11 @@
-var a = 500;
-var mw = mediaWiki;
+const a = 500,
+	mw = mediaWiki;
 
 mw.testNamespace = {
-  add(x, y) {
-    return x + y;
-  },
-  getA() {
-    return a;
-  }
+	add( x, y ) {
+		return x + y;
+	},
+	getA() {
+		return a;
+	}
 };

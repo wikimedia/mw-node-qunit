@@ -1,4 +1,4 @@
-var
+const
 	headless = typeof window !== 'object';
 
 module.exports = {
@@ -9,8 +9,8 @@ module.exports = {
 	 */
 	setUp: function ( sandbox, global ) {
 		if ( !sandbox || headless ) {
-			const jsdom = require( 'jsdom' );
-			const window = new jsdom.JSDOM().window,
+			const jsdom = require( 'jsdom' ),
+				window = new jsdom.JSDOM().window,
 				document = window.document;
 
 			global.window = window || undefined;

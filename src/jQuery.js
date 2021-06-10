@@ -1,4 +1,4 @@
-var headless = typeof window !== 'object';
+const headless = typeof window !== 'object';
 
 module.exports = {
 	/**
@@ -18,7 +18,7 @@ module.exports = {
 	tearDown: function () {
 		if ( headless ) {
 			// prevent jQuery from caching the global window object.
-			delete require.cache[require.resolve( 'jquery' )];
+			delete require.cache[ require.resolve( 'jquery' ) ];
 		}
 	}
 };

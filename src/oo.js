@@ -1,4 +1,4 @@
-var headless = typeof window !== 'object';
+const headless = typeof window !== 'object';
 
 module.exports = {
 	/**
@@ -7,7 +7,7 @@ module.exports = {
 	 * @return {void}
 	 */
 	setUp: function ( sandbox, global ) {
-		var OO;
+		let OO;
 		if ( !sandbox || headless ) {
 			OO = require( 'oojs' );
 			OO.ui = {
