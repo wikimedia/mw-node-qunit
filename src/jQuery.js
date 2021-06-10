@@ -2,15 +2,17 @@ const headless = typeof window !== 'object';
 
 module.exports = {
 	/**
-	 * @param {sinon.SinonSandbox} sandbox
+	 * @param {sinon.SinonSandbox} [sandbox]
 	 * @param {NodeJS.Global} global
 	 * @return {void}
 	 */
 	setUp: function ( sandbox, global ) {
-		if ( headless ) {
+		if ( !sandbox || headless ) {
 			const $ = require( 'jquery' );
 			global.$ = $ || undefined;
-			sandbox.stub( global, '$' ).callsFake( $ );
+			if ( sandbox ) {
+				sandbox.stub( global, '$' ).callsFake( $ );
+			}
 		}
 	},
 	tearDown: function () {

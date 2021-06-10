@@ -7,14 +7,15 @@ const dom = require( './src/dom' ),
 
 module.exports = {
 	dom, jQuery, mw, mustache, oojs, sinon,
-	setUp: function () {
-		const sandbox = sinon.sandbox.create();
+	setUp: function ( useSandbox = true ) {
+		const sandbox = useSandbox ? sinon.sandbox.create() : null;
 
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
 		global.mediaWiki = global.mw;
 		global.jQuery = global.$;
-		return sandbox;
+		return useSandbox ? sandbox :
+			{ mw: global.mw, $: global.$ };
 	}
 };
