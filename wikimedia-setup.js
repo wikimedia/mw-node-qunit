@@ -1,3 +1,5 @@
+'use strict';
+
 const jsdom = require( 'jsdom' ),
 	sinon = require( 'sinon' ),
 	// Override Qunit.module to set up a sinon sandbox automatically

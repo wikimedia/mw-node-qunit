@@ -1,3 +1,5 @@
+'use strict';
+
 const
 	MwUri = function () {
 		this.query = {};
