@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"lint": "eslint --cache --max-warnings 0 .",
-		"test": "npm run lint && node mw-node-qunit.js 'tests/**/*.test.js' --globals",
+		"test": "npm run lint && GLOBALS=1 node mw-node-qunit.js 'tests/**/*.test.js'",
 		"test:raw": "./index.js 'tests/**/*.test.js'"
 	},
 	"repository": "github:wikimedia/mw-node-qunit",
@@ -23,14 +23,14 @@
 	"homepage": "https://github.com/wikimedia/mw-node-qunit#readme",
 	"dependencies": {
 		"eslint-config-wikimedia": "0.20.0",
-		"glob": "7.1.2",
+		"glob": "7.1.7",
 		"jquery": "3.6.0",
-		"jsdom": "12.2.0",
-		"mustache": "3.0.1",
-		"oojs": "2.2.2",
-		"prettier": "1.11.1",
-		"qunit": "2.7.0",
-		"sinon": "4.5.0"
+		"jsdom": "16.6.0",
+		"mustache": "4.2.0",
+		"oojs": "6.0.0",
+		"prettier": "2.3.1",
+		"qunit": "2.16.0",
+		"sinon": "11.1.1"
 	},
 	"bin": {
 		"mw-node-qunit": "./mw-node-qunit.js"
