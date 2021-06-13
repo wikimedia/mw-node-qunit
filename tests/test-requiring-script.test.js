@@ -1,3 +1,5 @@
+'use strict';
+
 QUnit.module( 'Require script that uses globals', {
 	beforeEach() {
 		require( './script' );

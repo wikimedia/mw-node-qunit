@@ -1,3 +1,5 @@
+'use strict';
+
 const a = 500,
 	mw = mediaWiki;
 

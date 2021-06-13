@@ -1,3 +1,5 @@
+'use strict';
+
 QUnit.module( 'Globals' );
 
 QUnit.test( 'mediaWiki global is defined', function ( assert ) {
