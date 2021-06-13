@@ -25,7 +25,7 @@ QUnit.module = function ( name, localEnv ) {
 			const config = Object.assign( {}, sinon.config, {
 				injectInto: this
 			} );
-			sinon.sandbox.create( config );
+			sinon.createSandbox( config );
 
 			// Interop with old setup config on mediawiki codebases
 			if ( localEnv.setup ) {

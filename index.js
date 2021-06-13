@@ -10,7 +10,7 @@ const dom = require( './src/dom' ),
 module.exports = {
 	dom, jQuery, mw, mustache, oojs, sinon,
 	setUp: function ( useSandbox = true ) {
-		const sandbox = useSandbox ? sinon.sandbox.create() : null;
+		const sandbox = useSandbox ? sinon.createSandbox() : null;
 
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
