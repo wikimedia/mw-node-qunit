@@ -17,6 +17,9 @@
 		"test",
 		"runner"
 	],
+	"engine": {
+		"node": ">=12"
+	},
 	"author": "Joaquin Oltra <joaquin@chimeces.com> (http://chimeces.com)",
 	"license": "GPL-3.0",
 	"bugs": "https://github.com/wikimedia/mw-node-qunit/issues",
