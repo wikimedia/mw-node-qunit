@@ -1,3 +1,31 @@
+# 6.3.0
+* Drop Node 10 support
+* Update dependencies
+* Update eslint-config-wikimedia to 0.20.0
+* Add CI (npm test) (#14)
+
+# 6.2.1
+* Remove unused dependencies
+* Replace prettier with ESLint
+
+# 6.2.0
+* Make sandboxes optional
+* Expand support for mw.Uri
+* Run npm audit, drop tap dot
+* Mock mediawiki messages can be escaped
+
+# 6.1.1
+* Bump jquery from 3.3.1 to 3.4.0
+
+# 6.1.0
+* Update mw-node-qunit tests
+* Add mw.user.tokens to mockMediaWiki
+
+# 6.0.0
+* Mock trackSubscribe
+* Support stubbing mw.template.get().render()
+* Doc: update package.json URLs
+
 # 5.0.0
 
 * Breaking: use org scoped packaging
