@@ -43,7 +43,8 @@ module.exports = function newMockMediaWiki() {
 		confirmCloseWindow: function () {},
 		hook: function () {
 			return {
-				fire: function () {}
+				fire: function () {},
+				add: function () {}
 			};
 		},
 		experiments: {
