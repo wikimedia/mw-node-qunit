@@ -103,6 +103,8 @@ module.exports = function newMockMediaWiki() {
 		track: function () {},
 		util: {
 			getParamValue: function () {},
+			showPortlet: function () {},
+			addPortletLink: function () {},
 			getUrl: function ( title ) { return title; }
 		},
 		loader: {
