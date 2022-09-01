@@ -1,3 +1,7 @@
+# 6.4.0
+* add mock for mw.hook().add()
+* Update CHANGELOG
+
 # 6.3.0
 * Drop Node 10 support
 * Update dependencies
