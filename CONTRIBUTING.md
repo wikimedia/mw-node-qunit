@@ -14,13 +14,14 @@ before spending time submitting a PR! It may save you time in the long run.
 ### Releasing
 
 Always run `npm test` and test the tool with a real repository before releasing.
+Make sure you have called `git fetch origin --tags` before proceeding.
 
 1.  Inspect the git log to check the changes since the last release:
     * `` git log `git describe --tags --abbrev=0` ..HEAD --oneline ``
 1.  Copy the changes and add them to `CHANGELOG.md`
     1.  Commit them
 1.  Make the new version and publish it:
-    * `npm version <version-type:major|minor|patch> && g ps && g ps --tags && npm publish`
+    * `npm version <version-type:major|minor|patch> && git push && git push --tags && npm publish`
 
 ### Updating dependencies
 
