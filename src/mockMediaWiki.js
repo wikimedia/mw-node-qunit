@@ -1,7 +1,8 @@
 'use strict';
 
 const
-	MwUri = function () {
+	MwUri = function ( uri ) {
+		this.uri = uri || 'https://host';
 		this.query = {};
 	},
 	/* eslint-disable camelcase */
@@ -20,7 +21,12 @@ Api.prototype.getToken = function () {};
 Api.prototype.postWithToken = function () {};
 
 MwUri.prototype.toString = function () {
-	return `https://host?${Object.keys( this.query ).join( '=' )}`;
+	// eslint-disable-next-line node/no-unsupported-features/node-builtins
+	const url = new URL( this.uri );
+	for ( const key in this.query ) {
+		url.searchParams.set( key, this.query[ key ] );
+	}
+	return url.toString();
 };
 
 module.exports = function newMockMediaWiki() {
