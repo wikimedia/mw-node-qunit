@@ -1,6 +1,6 @@
 {
 	"name": "@wikimedia/mw-node-qunit",
-	"version": "6.4.1",
+	"version": "6.4.2",
 	"description": "Node CLI qunit runner with mediawiki additions",
 	"main": "index.js",
 	"scripts": {
@@ -24,8 +24,10 @@
 	"license": "GPL-3.0",
 	"bugs": "https://github.com/wikimedia/mw-node-qunit/issues",
 	"homepage": "https://github.com/wikimedia/mw-node-qunit#readme",
+	"devDependencies": {
+		"eslint-config-wikimedia": "0.22.1"
+	},
 	"dependencies": {
-		"eslint-config-wikimedia": "0.21.0",
 		"glob": "7.2.0",
 		"jquery": "3.6.0",
 		"jsdom": "18.0.1",

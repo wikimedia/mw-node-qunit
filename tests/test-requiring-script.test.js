@@ -10,5 +10,5 @@ QUnit.module( 'Require script that uses globals', {
 } );
 
 QUnit.test( 'Can use the things created in the required script', ( assert ) => {
-	assert.equal( mediaWiki.testNamespace.add( 1, 2 ), 3 );
+	assert.strictEqual( mediaWiki.testNamespace.add( 1, 2 ), 3 );
 } );
