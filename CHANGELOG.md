@@ -1,3 +1,11 @@
+# 7.0.0
+* Drop Node 12 support
+* build: Upgrade eslint config to 0.22.1, move to devDependencies
+
+# 6.4.1
+* mw.Uri: Implement working mock `toString()`
+* mw.util: Add mocks of `showPortlet()` and `addPortletLink()`
+
 # 6.4.0
 * add mock for mw.hook().add()
 * Update CHANGELOG
