@@ -1,6 +1,6 @@
 {
 	"name": "@wikimedia/mw-node-qunit",
-	"version": "7.0.0",
+	"version": "7.1.0",
 	"description": "Node CLI qunit runner with mediawiki additions",
 	"main": "index.js",
 	"scripts": {
@@ -18,7 +18,7 @@
 		"runner"
 	],
 	"engine": {
-		"node": ">=14"
+		"node": ">=16"
 	},
 	"author": "Joaquin Oltra <joaquin@chimeces.com> (http://chimeces.com)",
 	"license": "GPL-3.0",
