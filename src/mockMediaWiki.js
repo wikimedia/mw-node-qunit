@@ -103,6 +103,8 @@ module.exports = function newMockMediaWiki() {
 				get: function () {}
 			},
 			isAnon: function () {},
+			isNamed: function () {},
+			isTemp: function () {},
 			generateRandomSessionId: function () { return Math.random().toString(); }
 		},
 		trackSubscribe: function () {},
