@@ -70,7 +70,8 @@ module.exports = function newMockMediaWiki() {
 			}
 		},
 		jqueryMsg: {
-			parser: function () {}
+			parser: function () {},
+			Parser: function () {}
 		},
 		language: {
 			convertNumber: function () {}
