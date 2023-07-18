@@ -106,6 +106,7 @@ module.exports = function newMockMediaWiki() {
 			isAnon: function () {},
 			isNamed: function () {},
 			isTemp: function () {},
+			acquireTempUserName: function () { return $.Deferred().resolve( null ); },
 			generateRandomSessionId: function () { return Math.random().toString(); }
 		},
 		trackSubscribe: function () {},
