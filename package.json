@@ -30,7 +30,7 @@
 	"dependencies": {
 		"glob": "7.2.0",
 		"jquery": "3.6.0",
-		"jsdom": "18.0.1",
+		"jsdom": "22.1.0",
 		"mustache": "4.2.0",
 		"oojs": "6.0.0",
 		"prettier": "2.4.1",
