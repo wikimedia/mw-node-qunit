@@ -10,6 +10,9 @@
 	"globals": {
 		"mediaWiki": "readonly"
 	},
+	"rules": {
+		"es-x/no-hashbang": "off"
+	},
 	"settings": {
 		"jsdoc": {
 			"preferredTypes": {
