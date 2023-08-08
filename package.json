@@ -25,7 +25,7 @@
 	"bugs": "https://github.com/wikimedia/mw-node-qunit/issues",
 	"homepage": "https://github.com/wikimedia/mw-node-qunit#readme",
 	"devDependencies": {
-		"eslint-config-wikimedia": "0.22.1"
+		"eslint-config-wikimedia": "0.25.1"
 	},
 	"dependencies": {
 		"glob": "7.2.0",
