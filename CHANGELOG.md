@@ -1,3 +1,10 @@
+# 7.2.0
+* Drop node 14 support
+* *Regenerate package.json
+* Run npm audit force and update eslint rules
+* Update jsdom
+* Update dependencies via npm audit
+
 # 7.0.0
 * Drop Node 12 support
 * build: Upgrade eslint config to 0.22.1, move to devDependencies
