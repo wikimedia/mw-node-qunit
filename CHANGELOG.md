@@ -1,6 +1,6 @@
 # 7.2.0
 * Drop node 14 support
-* *Regenerate package.json
+* Regenerate package.json
 * Run npm audit force and update eslint rules
 * Update jsdom
 * Update dependencies via npm audit
