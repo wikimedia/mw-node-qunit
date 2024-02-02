@@ -115,7 +115,8 @@ module.exports = function newMockMediaWiki() {
 			getParamValue: function () {},
 			showPortlet: function () {},
 			addPortletLink: function () {},
-			getUrl: function ( title ) { return title; }
+			getUrl: function ( title ) { return title; },
+			isInfinity: function ( str ) { return str; }
 		},
 		loader: {
 			load: function () {},
