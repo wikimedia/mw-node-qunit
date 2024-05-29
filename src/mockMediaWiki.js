@@ -19,6 +19,8 @@ Api.prototype.get = function () {};
 Api.prototype.post = function () {};
 Api.prototype.getToken = function () {};
 Api.prototype.postWithToken = function () {};
+Api.prototype.saveOption = function () {};
+Api.prototype.saveOptions = function () {};
 
 MwUri.prototype.toString = function () {
 	// eslint-disable-next-line node/no-unsupported-features/node-builtins
