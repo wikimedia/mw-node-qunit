@@ -86,7 +86,8 @@ module.exports = function newMockMediaWiki() {
 			return {
 				escaped: function () {},
 				text: function () {},
-				parse: function () {}
+				parse: function () {},
+				parseDom: function () {}
 			};
 		},
 		msg: function ( id ) { return id; },
