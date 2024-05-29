@@ -127,7 +127,8 @@ module.exports = function newMockMediaWiki() {
 			},
 			require: function () {
 				return {};
-			}
+			},
+			getState: function () {}
 		},
 		requestIdleCallback: function ( fn ) {
 			return fn();
