@@ -110,7 +110,10 @@ module.exports = function newMockMediaWiki() {
 			isNamed: function () {},
 			isTemp: function () {},
 			acquireTempUserName: function () { return $.Deferred().resolve( null ); },
-			generateRandomSessionId: function () { return Math.random().toString(); }
+			generateRandomSessionId: function () { return Math.random().toString(); },
+			clientPrefs: {
+				get: function () {}
+			}
 		},
 		trackSubscribe: function () {},
 		track: function () {},
