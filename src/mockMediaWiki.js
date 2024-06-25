@@ -112,7 +112,8 @@ module.exports = function newMockMediaWiki() {
 			acquireTempUserName: function () { return $.Deferred().resolve( null ); },
 			generateRandomSessionId: function () { return Math.random().toString(); },
 			clientPrefs: {
-				get: function () {}
+				get: function () {},
+				set: function () {}
 			}
 		},
 		trackSubscribe: function () {},
