@@ -23,7 +23,18 @@ module.exports = {
 			}
 			global.Image = global.window.Image;
 			global.Event = global.window.Event;
-			global.navigator = global.window.navigator;
+			// Before Node 21 we could just do global.navigator = global.window.navigator; but
+			// as an otherwise-undefined global Node's navigator API exists, implemented as an
+			// accessor with other a getter, so causes breakage.
+			Object.defineProperty(
+				global,
+				'navigator',
+				{
+					value: global.window.navigator,
+					writable: true,
+					configurable: true
+				}
+			);
 		}
 	}
 };
